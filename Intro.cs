@@ -16,7 +16,7 @@ namespace ConwaySharp
 						  "   - Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.\r\n\n" +
 
 						  "  In this implementation, the status of the individual cells are colour-coded as follows:\r\n" +
-						  "   - Dead cells are represented by the colour Black\r\n" +
+						  "   - Dead cells are represented by the colour Black \u001b[48;5;232m  \u001b[0m\r\n" +
 						  "   - Alive cells are represented by the colour Grey \u001b[48;5;247m  \u001b[0m\r\n" +
 						  "   - Newly born cells are represented by the colour White \u001b[48;5;255m  \u001b[0m\r\n" +
 						  "   - Cells that have just died are represented by the colour Dark Grey \u001b[48;5;235m  \u001b[0m\r\n\n" +
