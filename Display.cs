@@ -31,14 +31,27 @@ namespace ConwaySharp
 
 		private static void CalculateChar(int x, int y)
 		{
-			if (World.Array[x, y] == 1)
+			switch(World.Colourmap[x, y])
 			{
-				buffer += "██";
+				case 1:
+					buffer += "\u001b[38;5;235m"; // Cell has died, make cell dark grey
+					break;
+				case 2:
+					buffer += "\u001b[38;5;255m"; // A new cell is born, make cell white
+					break;
+				default:
+					if (World.Array[x, y] == 0)
+					{
+						buffer += "\u001b[30m"; // There is no cell here, make cell black
+					}
+					else
+					{                    
+						buffer += "\u001b[38;5;247m"; // There is a cell here that hasn't changed, make cell grey
+					}
+					break;
 			}
-			else
-			{
-				buffer += "  ";
-			}
+			buffer += "██";
+
 		}
 		public static void DrawBorder()
 		{

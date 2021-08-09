@@ -8,9 +8,10 @@ namespace ConwaySharp
 		{
 			Console.CursorVisible = false;
 			World.Init();
-			Resize.Disable();
-			Console.SetWindowSize(102, 53);
-			Console.SetBufferSize(102, 53);
+			Window.DisableResize();
+			Window.EnableANSIColour();
+			Console.SetWindowSize(103, 53);
+			Console.SetBufferSize(103, 53);
 			Display.DrawBorder();
 		}
 		static void Main(string[] args)
@@ -23,6 +24,7 @@ namespace ConwaySharp
 				Display.Draw();
 				World.Simulate();
 				Thread.Sleep(50);
+				
 			}
 		}
 	}
