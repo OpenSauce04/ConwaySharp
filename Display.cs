@@ -14,11 +14,11 @@ namespace ConwaySharp
 		public static void Draw()
 		{
 			Display.Reset();
-			for (int y = 0; y < 50; y++)
+			for (int y = 1; y <= 50; y++)
 			{
 				Console.CursorLeft = 1;
 				Console.CursorTop++;
-				for (int x = 0; x < 50; x++)
+				for (int x = 1; x <= 50; x++)
 				{
 					CalculateChar(x, y);
 				}

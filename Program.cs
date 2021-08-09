@@ -21,7 +21,8 @@ namespace ConwaySharp
 			for (; ; )
 			{
 				Display.Draw();
-				Thread.Sleep(16);
+				World.Simulate();
+				Thread.Sleep(50);
 			}
 		}
 	}
