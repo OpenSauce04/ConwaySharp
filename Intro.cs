@@ -7,7 +7,7 @@ namespace ConwaySharp
 		private static void IntroText()
 		{
 			Console.Write("\r\n  This program is a C# .net core 3.1 implementation of John Conway's famous \"Game of Life\" simulation.\r\n" +
-						  "  In this simulation, there is a 50x50 grid which is populated with cells which can either be dead or \r\nalive.\r\n\n" +
+						  "  In this simulation, there is a 50x50 grid which is populated with cells which can either be dead or \r\n  alive.\r\n\n" +
 						  "  The rules go as follows:\r\n" +
 
 						  "   - Any living cell with fewer than two live neighbours dies, as if by underpopulation.\r\n" +
@@ -30,6 +30,7 @@ namespace ConwaySharp
 			Console.CursorTop = 52;
 			Console.Write("DB");
 			Console.ReadKey();
+			Console.Clear();
 		}
 	}
 }
