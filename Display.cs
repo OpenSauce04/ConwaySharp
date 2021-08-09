@@ -24,14 +24,14 @@ namespace ConwaySharp
 				}
 				Console.Write(buffer);
 				buffer = "";
-				
+
 			}
 			Console.Write(Display.buffer);
 		}
 
 		private static void CalculateChar(int x, int y)
 		{
-			switch(World.Colourmap[x, y])
+			switch (World.Colourmap[x, y])
 			{
 				case 1:
 					buffer += "\u001b[38;5;235m"; // Cell has died, make cell dark grey
@@ -45,7 +45,7 @@ namespace ConwaySharp
 						buffer += "\u001b[30m"; // There is no cell here, make cell black
 					}
 					else
-					{                    
+					{
 						buffer += "\u001b[38;5;247m"; // There is a cell here that hasn't changed, make cell grey
 					}
 					break;

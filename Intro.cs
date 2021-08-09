@@ -23,9 +23,9 @@ namespace ConwaySharp
 
 						  "  A checkerboard pattern is used as a starting point in this implementation.\r\n\n" +
 
-						  "                              PRESS ANY KEY TO START\r\n\n\n\n\n\n"+
+						  "                              PRESS ANY KEY TO START\r\n\n\n\n\n\n" +
 
-						  "  Delay between frames: "+displayDelay+"ms");
+						  "  Delay between frames: " + displayDelay + "ms");
 			Console.CursorLeft = 101;
 			Console.CursorTop = 52;
 			Console.Write("DB");
