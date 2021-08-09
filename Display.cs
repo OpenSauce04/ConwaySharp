@@ -5,29 +5,51 @@ namespace ConwaySharp
 	class Display
 	{
 		private static string buffer;
-		public static void Clear()
+		public static void Reset()
 		{
 			Console.CursorLeft = 0;
 			Console.CursorTop = 0;
-			buffer = "";
 		}
 
 		public static void Draw()
 		{
-			Display.Clear();
-			
+			Display.Reset();
 			for (int y = 0; y < 50; y++)
 			{
+				Console.CursorLeft = 1;
+				Console.CursorTop++;
 				for (int x = 0; x < 50; x++)
 				{
-					if (World.Array[x, y] == 1)
-					{
-						buffer+="@";
-					}
+					CalculateChar(x, y);
 				}
-				buffer+='\n';
+				Console.Write(buffer);
+				buffer = "";
+				
 			}
 			Console.Write(Display.buffer);
+		}
+
+		private static void CalculateChar(int x, int y)
+		{
+			if (World.Array[x, y] == 1)
+			{
+				buffer += "██";
+			}
+			else
+			{
+				buffer += "  ";
+			}
+		}
+		public static void DrawBorder()
+		{
+			Display.Reset();
+			Console.WriteLine("╔" + new String('═', 100) + "╗");
+			for (int x = 0; x < 50; x++)
+			{
+				Console.WriteLine("║" + new String(' ', 100) + "║");
+			}
+			Console.WriteLine("╚" + new String('═', 100) + "╝");
+
 		}
 	}
 }
