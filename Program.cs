@@ -2,8 +2,9 @@
 using System.Threading;
 namespace ConwaySharp
 {
-	class Program
+	partial class Program
 	{
+		static int displayDelay = 50;
 		private static void Init()
 		{
 			Console.CursorVisible = false;
@@ -12,18 +13,17 @@ namespace ConwaySharp
 			Window.EnableANSIColour();
 			Console.SetWindowSize(103, 53);
 			Console.SetBufferSize(103, 53);
-			Display.DrawBorder();
 		}
 		static void Main(string[] args)
 		{
 			Program.Init();
-
-
+			IntroText();
+			Display.DrawBorder();
 			for (; ; )
 			{
 				Display.Draw();
 				World.Simulate();
-				Thread.Sleep(50);
+				Thread.Sleep(displayDelay);
 				
 			}
 		}
