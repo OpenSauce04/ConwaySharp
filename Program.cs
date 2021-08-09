@@ -9,7 +9,8 @@ namespace ConwaySharp
 			Console.CursorVisible = false;
 			World.Init();
 			Resize.Disable();
-			Console.SetWindowSize(102, 52);
+			Console.SetWindowSize(102, 53);
+			Console.SetBufferSize(102, 53);
 			Display.DrawBorder();
 		}
 		static void Main(string[] args)
